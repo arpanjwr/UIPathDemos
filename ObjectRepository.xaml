@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ObjectRepository" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1240,970" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ObjectRepository" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="LoginStatus" Type="OutArgument(x:String)" />
+    <x:Property Name="argUserID" Type="InArgument(x:String)" />
+    <x:Property Name="argPassword" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>628,1058</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -36,6 +44,7 @@
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -88,9 +97,17 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>FirstProcessUIPath.Core</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ObjectRepository" sap:VirtualizedContainerService.HintSize="450,905" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ObjectRepository" sap:VirtualizedContainerService.HintSize="1204,1741" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="UserID" />
       <Variable x:TypeArguments="x:String" Name="pwd" />
@@ -100,55 +117,84 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="User Name">
-      <ui:InputDialog.Result>
-        <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">UserID</CSharpReference>
-        </OutArgument>
-      </ui:InputDialog.Result>
-      <ui:InputDialog.Title>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"UserID""</CSharpValue>
-        </InArgument>
-      </ui:InputDialog.Title>
-    </ui:InputDialog>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Password" Title="Password">
-      <ui:InputDialog.Result>
-        <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">pwd</CSharpReference>
-        </OutArgument>
-      </ui:InputDialog.Result>
-    </ui:InputDialog>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Log In" sap:VirtualizedContainerService.HintSize="1050,1096" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="8e466284-8b63-4914-9e07-55c92de60179" Version="V2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1142,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,255" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="User Name">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">UserID</CSharpReference>
+              </OutArgument>
+            </ui:InputDialog.Result>
+            <ui:InputDialog.Title>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"UserID""</CSharpValue>
+              </InArgument>
+            </ui:InputDialog.Title>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InputDialog>
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Password" Title="Password">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">pwd</CSharpReference>
+              </OutArgument>
+            </ui:InputDialog.Result>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InputDialog>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Log In" sap:VirtualizedContainerService.HintSize="1142,1354" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="8e466284-8b63-4914-9e07-55c92de60179" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,879" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1108,1137" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1046,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://bptravel.blueprism.com/login.html" ContentHash="pe2w8Cqg7kG2D2q3MyhRyQ" CvElementArea="671, 215, 291, 31" CvType="InputBox" DesignTimeRectangle="672, 263, 289, 29" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='username' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='username' type='text' tag='INPUT' class='text' aaname='' /&gt;" Guid="1cd878d7-341a-427b-80f8-61ed961c2e37" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASUAAAAhCAYAAACfgb3VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAElSURBVHhe7d2xSgNREIZR3//hYiuCVrETCSQSCJgrP7jLxmS75d4pzoFpQuqP2S12nhpAIaIElHIXpa/jpb1+nNrz+6Ht3owxZvtJX9KZ9Oa/myjtP8/tZX9sh+9L+7le/34F2Fb6ks6kN+nO0hylFCt/ECOgl/Qm3VluTHOUskqlXAA9pTvpz2SOUp7xbElAb+lO+jOZo5SXTwAjLPsjSsBwogSUIkpAKaIElCJKQCmiBJQiSkApogSUIkpAKaIElCJKQCmiBJQiSkApogSUIkpAKaIElCJKQCmiBJTyMEq+0Q2MsPqNbtdMgBFWr5m4+wb0lt6s3n0LF3KBHtKXdCa9Wb2QO0mxskrlGS8vn4wxZutJX9KZ5YY0uYsSwEiiBBTS2i97Epa4J1oEUQAAAABJRU5ErkJggg==" InformativeScreenshot="c0018ad19614b4f06550ec6e671ad287.png" Reference="K1BZwnu56kinkZslcDi0gw/uR8jjEzGnkKGpEEFM51dBg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
               <uix:NTypeInto.Text>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">UserID</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">argUserID</CSharpValue>
                 </InArgument>
               </uix:NTypeInto.Text>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1046,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://bptravel.blueprism.com/login.html" ContentHash="7dUHk-Br8E6Sco0JdXCb4g" CvElementArea="671, 306, 291, 32" CvType="InputBox" DesignTimeRectangle="672, 308, 289, 29" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='password' type='password' tag='INPUT' class='text' aaname='' /&gt;" Guid="ebf37360-fde7-41d3-a9d5-fac928e09a99" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASUAAAAhCAYAAACfgb3VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAElSURBVHhe7d2xSgNREIZR3//hYiuCVrETCSQSCJgrP7jLxmS75d4pzoFpQuqP2S12nhpAIaIElHIXpa/jpb1+nNrz+6Ht3owxZvtJX9KZ9Oa/myjtP8/tZX9sh+9L+7le/34F2Fb6ks6kN+nO0hylFCt/ECOgl/Qm3VluTHOUskqlXAA9pTvpz2SOUp7xbElAb+lO+jOZo5SXTwAjLPsjSsBwogSUIkpAKaIElCJKQCmiBJQiSkApogSUIkpAKaIElCJKQCmiBJQiSkApogSUIkpAKaIElCJKQCmiBJTyMEq+0Q2MsPqNbtdMgBFWr5m4+wb0lt6s3n0LF3KBHtKXdCa9Wb2QO0mxskrlGS8vn4wxZutJX9KZ5YY0uYsSwEiiBBTS2i97Epa4J1oEUQAAAABJRU5ErkJggg==" InformativeScreenshot="eb12ff19a04ecd42bfb02c7a2016f8b5.png" Reference="K1BZwnu56kinkZslcDi0gw/izLuDH-ITUG2J-sHiy6vhA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -160,7 +206,7 @@
               </uix:NTypeInto.Target>
               <uix:NTypeInto.Text>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">pwd</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">argPassword</CSharpValue>
                 </InArgument>
               </uix:NTypeInto.Text>
               <sap:WorkflowViewStateService.ViewState>
@@ -170,7 +216,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="1046,52" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://bptravel.blueprism.com/login.html" ContentHash="33nifAim_Ui-RYY0nczurA" CvElementArea="807, 351, 154, 35" CvTextArea="860, 360, 48, 17" CvTextArgument="Log In" CvType="Button" DesignTimeRectangle="809, 352, 152, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='button' aaname='Log In' check:innerText='Log In' /&gt;" Guid="32405c8e-ad17-44d1-a761-fa6c97f98b62" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJwAAAAkCAYAAAB8IVNVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH9SURBVHhe7dy9SsNQHIZxL8XJq3F27+jgRRQsbt5Ab8DBr6UdBKGullJ06uxgoTcgiHDMm/zz1SRtQ5MzJM8PzpD2pFHycFKF5MQBHhEcvCoE9/z+5S5u39zZ1ZM7vXxgMGoPtaOG1NK2XHDX95/u/ObVvXx8u5/fP3sVqEftqCG1pKaykuBUoyYQGpqiltRUdqVLgtMSqCqBJqkptRVLgtN1l9UNTVNTaiuWBKcve0Absm0RHFpHcPCK4OAVwcGr3gS3mUyD32vmFrbtU3Tsx3QM525j7/UNwXmzcqMgttHSNnuK4LwhOCG4rPXcDfZe+qJw0jnTcJ/9IZUEZ8cbLbc+c7yyCd1DcDE7+YNJmthirAAy+5TMSaOx7UrVweV/rmhe7hgdQnAmjKuwouVP/q45x61wtm3C43R0lSO40MbdDctOcvb1qjkEVwfBhQjOF4IzB19SCe4oBBezk7/zj4blLNjOBxLNIbhD9Sy4KI7tkZxwCyB5r+zfIhZduu/+Fa5w7PhzCS7SxeBaE0YzdXdr28ZOBFdLsJptrXrhalS2EqIUwdUSXT5LL484CMHBK4KDVwQHr0qD4zZBtKHyNkFuhEYbKm+E5lEPaJpaqnzUg/AwGzRB7aghtVT5MJuYatQSqOuuvuwxGHWH2lFD2ZUtVggOaBPBwSPn/gHwFhMKiH7gRQAAAABJRU5ErkJggg==" InformativeScreenshot="bc02bdf6fa2be62efd342d2fed702578.png" Reference="K1BZwnu56kinkZslcDi0gw/huJNOx_BKk2-O29R3FQdlw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -181,23 +227,43 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'NewElement'" sap:VirtualizedContainerService.HintSize="954,322" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8e466284-8b63-4914-9e07-55c92de60179" Timeout="30" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'NewElement'" sap:VirtualizedContainerService.HintSize="1046,414" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8e466284-8b63-4914-9e07-55c92de60179" Timeout="30" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">LoginStatus</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Failed</InArgument>
+                    </Assign.Value>
+                  </Assign>
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">LoginStatus</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Successfull</InArgument>
+                    </Assign.Value>
+                  </Assign>
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -209,6 +275,12 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
           </Sequence>
         </ActivityAction>
@@ -218,12 +290,12 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Search" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="IfNotOpen" ScopeGuid="4df788ef-a34c-427a-9b22-1ca6583b7735" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Search" sap:VirtualizedContainerService.HintSize="1142,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="IfNotOpen" ScopeGuid="4df788ef-a34c-427a-9b22-1ca6583b7735" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -254,7 +326,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Create Quote" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="IfNotOpen" ScopeGuid="ca350f7e-734b-44a7-bfdb-47463747674e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Create Quote" sap:VirtualizedContainerService.HintSize="1142,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="IfNotOpen" ScopeGuid="ca350f7e-734b-44a7-bfdb-47463747674e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
