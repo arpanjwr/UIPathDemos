@@ -91,7 +91,7 @@
           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new DataTable()</CSharpValue>
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:Int32" Default="0" Name="TotalSalary" />
+      <Variable x:TypeArguments="x:Int32" Default="10" Name="TotalSalary" />
       <Variable x:TypeArguments="sd:DataRow" Name="drDataRow" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtFilteredTable" />
       <Variable x:TypeArguments="x:Int32" Name="Salary" />
