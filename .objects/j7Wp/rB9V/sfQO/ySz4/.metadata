@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Create Quote",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "ySz4f2sy70KMd1HaCPxMnQ",
+  "Reference": "K1BZwnu56kinkZslcDi0gw/ySz4f2sy70KMd1HaCPxMnQ",
+  "ParentRef": "K1BZwnu56kinkZslcDi0gw/sfQOFu_PvkyDZqJD4QzV0g",
+  "Created": "2023-10-04T04:08:25.7030866Z",
+  "Updated": "2023-10-04T04:08:25.7030866Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

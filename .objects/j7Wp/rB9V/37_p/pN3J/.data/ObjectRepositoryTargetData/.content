@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6sAlBVhPZ0q2-Wddobp00A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bptravel.blueprism.com/" CvTextArea="691, 348, 260, 15" CvTextArgument="Please enter a valid user name and" CvType="Text" DesignTimeRectangle="691, 348, 260, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Please enter'" Guid="089e297d-80e7-4a69-a066-f0a6f500bb07" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CvTextArea="896, 312, 48, 17" CvTextArgument="Log In" CvType="Text" DesignTimeRectangle="691, 297, 307, 45" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='right' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='right' type='' tag='TD' aaname='' check:innerText='Log In' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATcAAAAxCAYAAAC/DO6bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKrSURBVHhe7d1BShtRGMDxHqWrnsZ19y676CEExV0v4AVc2NaNLgqC3SoideXahUIuUCiF13zJi0nGiZqamQdvfj+YxSSTjMLHP29GIe8SQIXEDaiSuAFVEjegSuIGVEncgCqJG1AlcQOqJG5AlcSNIo4v7tLHLz/Th8/f0/tPX222tbeYnZihmKU24kbvdo9u0tb+Wfrx6z79/vM3PwrridmJGYpZiplqEjd6FZ+yMYyixqbELMVMNVdw4kav4jIiPm1hk2KmYrYWiRu9ivskVm1sWsxUzNYicaNXcSMYutCcLXGjV+JGV8SNosSNrogbRYkbXRE3ihI3uiJuFFVj3EYnp+Pf6zxd5f0+Tc/9bb7tXKZRfm5oxI2ixK0Lt2lvHLa967w7UOJGUeLWBXEL4kZRg43bw2XafvHycRqp+TGnk9e8HK2WuOXz7V033vPgNh9QH3GjqEHGLYdm+2Ses6uDiM3Ca1qOmQcq76+0Om7LP9f0uKVzVETcKGqIcZuE7MlKbTk0zx3ztpVb3s8m56l09SZuFDW8uI3S4U5bUBYfX3WMuK1D3ChK3GbEbdPEjaKGF7c1LkvF7U3EjaKGGLdZaJ79g8L1+Xh/OUbTY8TttcSNouqN2zREze0xLjk2j8+1/StIDtz8tS+v3J6ce/a+4iZu9KvGuHVmEqjTdPiQ93mWuFGUuK0yXqU1VnOTVVbbCo9W4kZR4rbK9BK09RKTVxE3ihI3uiJuFCVudEXcKErc6Iq4UZSv9qMLvtqP4nwpM13wpcwUd3xxl7b2z6ze2JiYpZipmK1F4kbvdo9uJsMYn7Yix/+K2YkZilmKmWoSN4qIT9m4jIj7JHEj2GZbd4vZiRlqrthmxA2okrgBVRI3oEriBlRJ3IAqiRtQJXEDqiRuQIVS+gdtK+FplKVvcgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4b2857bf3a84ad855b3d1f975cd7b9e5.png" xmlns="">0lhZ-Jq_eJ0yDWCGUeaBxtw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

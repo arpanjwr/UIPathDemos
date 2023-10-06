@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Aqt4kpqyVkK5vg_rfIVmgw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bptravel.blueprism.com/createquote.html" CvElementArea="672, 296, 290, 31" CvType="InputBox" DesignTimeRectangle="673, 297, 288, 28" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'SELECT to'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='to' tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='to' type='' tag='SELECT' class='airport' aaname='' /&gt;" Guid="fa148b8c-a7d7-4f1a-84ed-2fad46718249" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CvTextArea="502, 304, 19, 14" CvTextArgument="To" CvType="Text" DesignTimeRectangle="503, 292, 151, 37" ElementType="Text" FriendlyName="'To'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='left' aaname='To' check:innerText='To' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJsAAAApCAYAAAAiY1vyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADuSURBVHhe7di9jcJAFEZRCqAbuqEHgu0CkVEBMSExFRAhuoAqHiDMBgYjzy76onMkBzNyeDV/k4IQsREjNmLERozYiBEbMWIjRmzEiI0YsREjNmLERozYiBEbMWIjRmzE/MZ23i1rOvv5/K1P3d/QbnBlO6xvcS32de7G8F9iI6Y5tv52O9/JkXGaYnuEtqztpZuoU62c5RipIbZHWC8r2XHTCxDeGx/bZV/zW2yrYzd+GpqHHrERYxslxgWBmKbY7jx98FeDscG3iY0YsREjNmLERozYiBEbMWIjRmzEiI0YsREjNmLERozYCKm6AmkJgtT0mQItAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="207212af0108f79b8ae5b3580f3866b6.png" xmlns="">0zQF2LFysnkSNyta7STC3dg</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

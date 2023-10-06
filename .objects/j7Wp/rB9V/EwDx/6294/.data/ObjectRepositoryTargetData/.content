@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZYQyWF9UVkSNDnSxGUWdFQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bptravel.blueprism.com/createquote.html" CvElementArea="672, 259, 291, 31" CvType="InputBox" DesignTimeRectangle="673, 260, 288, 28" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'SELECT from'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='from' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='from' type='' tag='SELECT' class='airport' aaname='' /&gt;" Guid="c8e85d86-2c27-495e-bdac-017cff33224c" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CvTextArea="503, 267, 39, 14" CvTextArgument="From" CvType="Text" DesignTimeRectangle="503, 255, 151, 37" ElementType="Text" FriendlyName="'From'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='left' aaname='From' check:innerText='From' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJsAAAApCAYAAAAiY1vyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFASURBVHhe7djPDYIwGIdhB3Abt2EHD25hvDEBZ4+enYATYQuY4hNKRWh6qAZ/MfV9EmIoLXp4wx93BogQG2SIDTLEBhligwyxQYbYIENskCE2yBAbZIgNMsQGGWKDDLFBhtggQ2yQCWJr7XI42T66VVb7WcAnorEVt87vA9shNsi8HVtdDrfU4926pppvsfP8/m6FH3PbOG864ri1ZTt9zvPOdu2Hg4vzjdulmdYgH4nPbD6IwRzKEM2KD20Z6jT39az3XLsMKXo+F97rO5GHz69sfv8pPr4+n5sTRurCCl4+fLhc3fKyUWydXY+RkILx5Nj87yC2vBAbZH7zNkpsWdostuQXBGL7W9vFNkr862OF2P5GEBvwPcQGGWKDDLFBhtggQ2yQITbIEBtkiA0yxAYZYoMMsUGG2CBDbBAxewCUlgr3enBjEAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="63fa5717171e290e8c08c0288ef8241b.png" xmlns="">0PXQjxgiLuEGKG_YWR5q-QA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sLb3oMQQ5Ue4801Vy3WJLw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bptravel.blueprism.com/createquote.html" CvElementArea="672, 480, 72, 31" CvType="InputBox" DesignTimeRectangle="673, 482, 70, 28" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'SELECT children'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='children' tableRow='7' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='children' type='' tag='SELECT' class='passangers' aaname='' /&gt;" Guid="e1ab1470-b0ee-4b80-9e3f-e7ca166ad700" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Create Quote' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CvTextArea="503, 488, 62, 15" CvTextArgument="Children" CvType="Text" DesignTimeRectangle="503, 477, 151, 37" ElementType="Text" FriendlyName="'Children'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='left' aaname='Children' check:innerText='Children' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJsAAAApCAYAAAAiY1vyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHgSURBVHhe7dfNbcIwAIbhDsA2bMMOHLoF4sYEnDlyZgJOiC1gCjfxH7bjhEDop6h9H8mHqHFiyW8NfBlAhNggQ2yQITbIEBtkiA0yxAYZYoMMsUGG2CBDbJAhNsgQG2SIDTLEBpk3Y7uZw/rbLHZXfz3OedfMWZ+a2QMue7NY7s3ZX+Lv6InNx7RMx8Yc7v7Po2Lz9yRxEdv/1o3tfjKrNq4ipNtxY6PbXuwVJxteVsR2NdtKaFET4oHY8KY8NrvR6cdln0dsNqD4UZtHUsZVjc2+M31GO5LnxDX5f4R2xGf4dSRz3cnrhbkXf1r7sToO5o5fksXmPirHnCqPTU4391lc5bV7XxF3ebLFGMt1ufiycPxXgLimMDcNvLwHMlls1ZOnqudjtAhlOLZKLK1qbN3T1oZaWat9R1hXda5bO6eb3rSTbUpsfSfMyNjss9pTqzaIbZYmf2fLqGMr318itlnJY5v6a/SV2Py73o1t1ClMbLNSxNawG9QNyW1uiOMTsfnrLJjwi/N5bPHe5HlWc38MidhmpRub5WOyGx9Gummfia3lggujmVs8oz+21pN1Etus9MQGfB6xQYbYIENskCE2yBAbZIgNMsQGGWKDDLFBhtggQ2yQITbIEBtEjPkBpNpQUNjWVNQAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d362d81886677ad0ac65bcafaf83fe7d.png" xmlns="">0ENpH4_YYMEGz9u5o0Klg7Q</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

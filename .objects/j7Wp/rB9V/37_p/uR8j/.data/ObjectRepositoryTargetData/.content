@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="pe2w8Cqg7kG2D2q3MyhRyQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bptravel.blueprism.com/login.html" CvElementArea="671, 215, 291, 31" CvType="InputBox" DesignTimeRectangle="672, 263, 289, 29" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='username' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='username' type='text' tag='INPUT' class='text' aaname='' /&gt;" Guid="1cd878d7-341a-427b-80f8-61ed961c2e37" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASUAAAAhCAYAAACfgb3VAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAElSURBVHhe7d2xSgNREIZR3//hYiuCVrETCSQSCJgrP7jLxmS75d4pzoFpQuqP2S12nhpAIaIElHIXpa/jpb1+nNrz+6Ht3owxZvtJX9KZ9Oa/myjtP8/tZX9sh+9L+7le/34F2Fb6ks6kN+nO0hylFCt/ECOgl/Qm3VluTHOUskqlXAA9pTvpz2SOUp7xbElAb+lO+jOZo5SXTwAjLPsjSsBwogSUIkpAKaIElCJKQCmiBJQiSkApogSUIkpAKaIElCJKQCmiBJQiSkApogSUIkpAKaIElCJKQCmiBJTyMEq+0Q2MsPqNbtdMgBFWr5m4+wb0lt6s3n0LF3KBHtKXdCa9Wb2QO0mxskrlGS8vn4wxZutJX9KZ5YY0uYsSwEiiBBTS2i97Epa4J1oEUQAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='msedge.exe' title='BP Travel - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c0018ad19614b4f06550ec6e671ad287.png" xmlns="">04ZmKv_3td06je-eQRxdnQw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
